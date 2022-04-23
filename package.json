@@ -2,11 +2,10 @@
   "name": "job_manager_next",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://rsfez.github.io/resume_react",
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export -o build/",
-    "deploy": "yarn build && gh-pages -d build",
+    "build": "next build && next export",
+    "deploy": "yarn build && touch out/.nojekyll && gh-pages -d out -e resume_next -r git@github.com:rsfez/rsfez.github.io.git -b main -t true",
     "start": "next start",
     "lint": "next lint"
   },
