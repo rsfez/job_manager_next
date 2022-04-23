@@ -6,6 +6,7 @@ import {
   spacing8,
 } from "../../design/constants/dimensions";
 import { Spacing } from "../../design/Spacing";
+import { Row } from "../../design/Containers";
 
 export type HeaderParams = {
   backgroundColor: string;
@@ -15,9 +16,7 @@ export type HeaderParams = {
   companyName: string;
 };
 
-const Container = styled.div<{ backgroundColor: string }>`
-  display: flex;
-  flex-direction: row;
+const Container = styled(Row)<{ backgroundColor: string }>`
   padding: ${spacing4} 0 ${spacing8} ${appLeftPadding};
   background-color: ${(props) => props.backgroundColor};
 `;

@@ -1,11 +1,11 @@
 import Head from "next/head";
-import { Header, HeaderParams } from "./Header";
+import { Header, HeaderParams } from "../../Components/Home/Header";
 import { useEffect, useState } from "react";
 import json from "../../assets/data.json";
 import { getEmptyPerson, Person } from "../../data/Person";
 import styled from "styled-components";
 import { primaryBlue } from "../../design/constants/colors";
-import { SkillSet } from "./Skills/SkillSet";
+import { SkillSet } from "../../Components/Skills/SkillSet";
 
 const _loadPerson = async ({
   setPerson,

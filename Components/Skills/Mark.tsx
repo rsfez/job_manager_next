@@ -1,4 +1,4 @@
-import { H5DarkGrey, H5Grey, H5Orange, H5Yellow } from "../../../design/Text";
+import { H5DarkGrey, H5Grey, H5Orange, H5Yellow } from "../../design/Text";
 import React from "react";
 
 export type MarkProps = {

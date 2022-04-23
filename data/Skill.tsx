@@ -6,8 +6,18 @@ export enum Trend {
   terrible,
 }
 
+const TREND_MAP = new Map<string, Trend>([
+  ["superb", Trend.superb],
+  ["good", Trend.good],
+  ["poor", Trend.poor],
+  ["terrible", Trend.terrible],
+]);
+
+export const trendMapper = ({ trend }: { trend: string }): Trend =>
+  TREND_MAP.get(trend) ?? Trend.none;
+
 export type Skill = {
   name: string;
   mark: number;
-  trend: Trend;
+  trend: string;
 };
