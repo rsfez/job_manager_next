@@ -1,3 +1,6 @@
+export const h5FontSize = "1.125rem";
+export const p3FontSize = "1rem";
+
 export const spacing1 = "2.0px";
 export const spacing2 = "4.0px";
 export const spacing3 = "8.0px";

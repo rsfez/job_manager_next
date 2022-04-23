@@ -5,6 +5,7 @@ import json from "../../assets/data.json";
 import { getEmptyPerson, Person } from "../../data/Person";
 import styled from "styled-components";
 import { primaryBlue } from "../../design/constants/colors";
+import { SkillSet } from "./SkillSet";
 
 const _loadPerson = async ({
   setPerson,
@@ -60,7 +61,9 @@ export const Home = ({
       </Head>
 
       <Header {...headerParamsBuilder(person)} />
-      <main>Hello</main>
+      <main>
+        <SkillSet skillSet={person.skills.first_set!} />
+      </main>
     </Container>
   );
 };
