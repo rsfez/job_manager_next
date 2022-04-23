@@ -5,7 +5,7 @@ import json from "../../assets/data.json";
 import { getEmptyPerson, Person } from "../../data/Person";
 import styled from "styled-components";
 import { primaryBlue } from "../../design/constants/colors";
-import { SkillSet } from "./SkillSet";
+import { SkillSet } from "./Skills/SkillSet";
 
 const _loadPerson = async ({
   setPerson,
