@@ -2,7 +2,7 @@ import { SkillSet as SkillSetModel } from "../../data/SkillSet";
 import { Role as RoleModel } from "../../data/Role";
 import { Skill } from "./Skill";
 
-export type SkillSetProps = {
+type SkillSetProps = {
   skillSet: SkillSetModel;
   selectedRole?: RoleModel;
 };

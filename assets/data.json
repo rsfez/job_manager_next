@@ -164,7 +164,7 @@
     "previousCompanies": []
   },
   "skills": {
-    "first_set": {
+    "firstSet": {
       "name": "Engineering",
       "skills": [
         {
@@ -230,7 +230,7 @@
         }
       ]
     },
-    "second_set": {
+    "secondSet": {
       "name": "Soft Skills",
       "skills": [
         {
@@ -296,7 +296,7 @@
         }
       ]
     },
-    "misc_set": {
+    "miscSet": {
       "name": "Languages",
       "skills": [
         {

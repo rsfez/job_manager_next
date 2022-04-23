@@ -1,7 +1,6 @@
 import { Trend as TrendEnum } from "../../data/Skill";
-import Image from "next/image";
 
-export type TrendProps = {
+type TrendProps = {
   trend: TrendEnum;
 };
 
@@ -26,7 +25,6 @@ export const Trend = ({ trend }: TrendProps) => {
       alt = "Terrible";
       break;
   }
-  return (
-    <Image src={imageUrl} alt={alt} layout={"raw"} width={"18"} height={"18"} />
-  );
+  // eslint-disable-next-line @next/next/no-img-element
+  return <img src={imageUrl} alt={alt} />;
 };

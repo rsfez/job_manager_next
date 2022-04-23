@@ -1,7 +1,7 @@
 import { H5DarkGrey, H5Grey, H5Orange, H5Yellow } from "../../design/Text";
 import React from "react";
 
-export type MarkProps = {
+type MarkProps = {
   mark: number;
   gradeMapper?: ({ mark }: { mark: number }) => Grade;
 };

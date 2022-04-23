@@ -11,7 +11,7 @@ import { Trend } from "./Trend";
 import { Spacing } from "../../design/Spacing";
 import { spacing5 } from "../../design/constants/dimensions";
 
-export type SkillProps = {
+type SkillProps = {
   skill: SkillModel;
   trendMapper?: ({ trend }: { trend: string }) => TrendEnum;
 };

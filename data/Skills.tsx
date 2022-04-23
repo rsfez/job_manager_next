@@ -1,7 +1,13 @@
-import { SkillSet } from "./SkillSet";
+import { getEmptySkillSet, SkillSet } from "./SkillSet";
 
 export type Skills = {
-  first_set?: SkillSet;
-  second_set?: SkillSet;
-  misc_set?: SkillSet;
+  firstSet: SkillSet;
+  secondSet: SkillSet;
+  miscSet: SkillSet;
 };
+
+export const getEmptySkills = (): Skills => ({
+  firstSet: getEmptySkillSet(),
+  secondSet: getEmptySkillSet(),
+  miscSet: getEmptySkillSet(),
+});

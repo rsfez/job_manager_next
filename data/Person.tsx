@@ -1,7 +1,7 @@
 import { getEmptyRatings, Ratings } from "./Ratings";
 import { getEmptyRoles, Roles } from "./Roles";
 import { Companies, getEmptyCompanies } from "./Companies";
-import { Skills } from "./Skills";
+import { getEmptySkills, Skills } from "./Skills";
 
 export type Person = {
   fullName: string;
@@ -16,5 +16,5 @@ export const getEmptyPerson = (): Person => ({
   ratings: getEmptyRatings(),
   roles: getEmptyRoles(),
   companies: getEmptyCompanies(),
-  skills: {},
+  skills: getEmptySkills(),
 });
