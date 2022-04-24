@@ -1,5 +1,6 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
+import { assetPrefix } from "../design/constants/Paths";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -33,14 +34,14 @@ export default class MyDocument extends Document {
         <Head>
           <link
             rel="preload"
-            href="/fonts/adam.otf"
+            href={`${assetPrefix}/fonts/adam.otf`}
             as="font"
             type="font/otf"
             crossOrigin=""
           />
           <link
             rel="preload"
-            href="/fonts/gunzo2.otf"
+            href={`${assetPrefix}/fonts/gunzo2.otf`}
             as="font"
             type="font/otf"
             crossOrigin=""

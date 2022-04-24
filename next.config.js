@@ -1,9 +1,11 @@
 /** @type {import('next').NextConfig} */
+const basePath = process.env.NODE_ENV === "production" ? "/resume_next" : "";
+
 const nextConfig = {
   reactStrictMode: true,
   experimental: { images: { layoutRaw: true } },
-  assetPrefix: "/resume_next/",
-  basePath: "/resume_next",
+  basePath: basePath,
+  publicRuntimeConfig: { assetPrefix: `${basePath}` },
 };
 
 module.exports = nextConfig;

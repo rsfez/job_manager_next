@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
-    "deploy": "yarn build && touch out/.nojekyll && gh-pages -d out -e resume_next -r git@github.com:rsfez/rsfez.github.io.git -b main -t true",
+    "deploy": "yarn build && gh-pages -d out -e resume_next -r git@github.com:rsfez/rsfez.github.io.git -b main -t true",
     "start": "next start",
+    "prod": "next build && next start",
     "lint": "next lint"
   },
   "dependencies": {
