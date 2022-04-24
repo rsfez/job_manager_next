@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
-const Container = styled.div`
+export const Flex = styled.div`
   display: flex;
 `;
 
-export const Column = styled(Container)`
+export const Column = styled(Flex)`
   flex-direction: column;
 `;
 
-export const Row = styled(Container)`
+export const Row = styled(Flex)`
   flex-direction: row;
 `;

@@ -36,10 +36,12 @@ export const HeaderText = styled(Header)<{ color: string }>`
 
 const H = styled(Header)`
   font-family: "Adam", sans-serif;
+  align-self: flex-end;
 `;
 
 const H5 = styled(H)`
   font-size: ${h5FontSize};
+  line-height: 16px;
 `;
 
 export const H5Grey = styled(H5)`
