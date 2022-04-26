@@ -13,7 +13,7 @@ const TREND_MAP = new Map<string, Trend>([
   ["terrible", Trend.terrible],
 ]);
 
-export const trendMapper = ({ trend }: { trend: string }): Trend =>
+export const map = ({ trend }: { trend: string }): Trend =>
   TREND_MAP.get(trend) ?? Trend.none;
 
 export type Skill = {

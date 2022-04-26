@@ -1,28 +1,21 @@
 import { H5DarkGrey, H5Grey, H5Orange, H5Yellow } from "../../design/Text";
 import React from "react";
+import { map } from "./GradeMapper";
 
 type MarkProps = {
   mark: number;
-  gradeMapper?: ({ mark }: { mark: number }) => Grade;
 };
 
-enum Grade {
+export enum Grade {
   weak,
   standard,
   good,
   great,
 }
 
-const _gradeMapper = ({ mark }: { mark: number }): Grade => {
-  if (mark < 6) return Grade.weak;
-  if (mark < 12) return Grade.standard;
-  if (mark < 16) return Grade.good;
-  return Grade.great;
-};
-
-export const Mark = ({ mark, gradeMapper = _gradeMapper }: MarkProps) => {
+export const Mark = ({ mark }: MarkProps) => {
   let MarkComp: React.ElementType;
-  switch (gradeMapper({ mark })) {
+  switch (map({ mark })) {
     case Grade.weak:
       MarkComp = H5DarkGrey;
       break;

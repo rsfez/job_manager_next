@@ -1,9 +1,5 @@
 import styled from "styled-components";
-import {
-  Skill as SkillModel,
-  Trend as TrendEnum,
-  trendMapper as _trendMapper,
-} from "../../data/Skill";
+import { map, Skill as SkillModel, Trend as TrendEnum } from "../../data/Skill";
 import { Flex, Row } from "../../design/Containers";
 import { P3 } from "../../design/Text";
 import { Mark } from "./Mark";
@@ -24,8 +20,8 @@ const MarkContainer = styled(Flex)`
   width: ${spacing10};
 `;
 
-export const Skill = ({ skill, trendMapper = _trendMapper }: SkillProps) => {
-  const trend = trendMapper({ trend: skill.trend });
+export const Skill = ({ skill }: SkillProps) => {
+  const trend = map({ trend: skill.trend });
   return (
     <Container>
       <P3>{skill.name}</P3>
