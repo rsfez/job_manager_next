@@ -1,10 +1,12 @@
 import Head from "next/head";
-import { Header, HeaderParams } from "../Components/Home/Header";
+import { Header, HeaderParams } from "../components/Home/Header";
 import json from "../assets/data.json";
 import { Person } from "../data/Person";
 import styled from "styled-components";
 import { primaryBlue } from "../design/constants/colors";
-import { SkillSet } from "../Components/Skills/SkillSet";
+import { Row } from "../design/Containers";
+import { SkillSet } from "../components/Skills/SkillSet";
+import { PersonInfo } from "../components/PersonInfo";
 
 type HomeParams = {
   person: Person;
@@ -24,6 +26,14 @@ const Container = styled.div`
   height: 100%;
 `;
 
+const PersonInfoContainer = styled.div`
+  flex-grow: 3;
+`;
+
+const SkillSetContainer = styled.div`
+  flex-grow: 2;
+`;
+
 const Home = ({
   person,
   headerParamsBuilder = _headerParamsBuilder,
@@ -35,7 +45,20 @@ const Home = ({
 
     <Header {...headerParamsBuilder(person)} />
     <main>
-      <SkillSet skillSet={person.skills.firstSet!} />
+      <Row>
+        <PersonInfoContainer>
+          <PersonInfo person={person} />
+        </PersonInfoContainer>
+        <SkillSetContainer>
+          <SkillSet skillSet={person.skills.firstSet!} />
+        </SkillSetContainer>
+        <SkillSetContainer>
+          <SkillSet skillSet={person.skills.secondSet!} />
+        </SkillSetContainer>
+        <SkillSetContainer>
+          <SkillSet skillSet={person.skills.miscSet!} />
+        </SkillSetContainer>
+      </Row>
     </main>
   </Container>
 );

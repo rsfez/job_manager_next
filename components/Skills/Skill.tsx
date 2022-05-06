@@ -4,7 +4,8 @@ import { Flex, Row } from "../../design/Containers";
 import { P3 } from "../../design/Text";
 import { Mark } from "./Mark";
 import { Trend } from "./Trend";
-import { spacing10 } from "../../design/constants/dimensions";
+import { spacing10, spacing7 } from "../../design/constants/dimensions";
+import { Spacing } from "../../design/Spacing";
 
 type SkillProps = {
   skill: SkillModel;
@@ -20,17 +21,15 @@ const MarkContainer = styled(Flex)`
   width: ${spacing10};
 `;
 
-export const Skill = ({ skill }: SkillProps) => {
-  const trend = map({ trend: skill.trend });
-  return (
-    <Container>
-      <P3>{skill.name}</P3>
-      <Row>
-        {skill.trend && <Trend trend={trend} />}
-        <MarkContainer>
-          <Mark mark={skill.mark} />
-        </MarkContainer>
-      </Row>
-    </Container>
-  );
-};
+export const Skill = ({ skill }: SkillProps) => (
+  <Container>
+    <P3>{skill.name}</P3>
+    <Row>
+      {skill.trend && <Trend trend={map({ trend: skill.trend })} />}
+      <MarkContainer>
+        <Mark mark={skill.mark} />
+      </MarkContainer>
+      <Spacing right={spacing7} />
+    </Row>
+  </Container>
+);

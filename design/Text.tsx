@@ -7,7 +7,12 @@ import {
   white,
 } from "./constants/colors";
 import React from "react";
-import { h5FontSize, p3FontSize } from "./constants/dimensions";
+import {
+  h2FontSize,
+  h4FontSize,
+  h5FontSize,
+  p3FontSize,
+} from "./constants/dimensions";
 
 const Header = styled.div`
   text-overflow: ellipsis;
@@ -37,6 +42,20 @@ export const HeaderText = styled(Header)<{ color: string }>`
 const H = styled(Header)`
   font-family: "Adam", sans-serif;
   align-self: flex-end;
+`;
+
+const H2 = styled(H)`
+  font-family: "Gunzo2", sans-serif;
+  font-size: ${h2FontSize};
+`;
+
+const H4 = styled(H)`
+  font-family: "Gunzo2", sans-serif;
+  font-size: ${h4FontSize};
+`;
+
+export const H4Yellow = styled(H4)`
+  color: ${secondaryYellow};
 `;
 
 const H5 = styled(H)`
